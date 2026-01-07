@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "PGLocal",
+            "database": "perntodo",
+            "username": "postgres",
+            "password": "aom18747"
+        }
+    ]
+}

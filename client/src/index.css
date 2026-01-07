@@ -1,0 +1,470 @@
+/* Ensure full height from top to bottom */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #fafaf6; /* Light background like in screenshot */
+}
+
+/* This will center your component in the full screen */
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eef7f0;
+}
+
+/* App Tile */
+.app-title {
+  position: absolute;
+  top: 150px;
+  font-size: 50px;
+  color: #4caf50;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+/* Styled login form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* This MUST apply if everything is wired correctly */
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+/* Input fields */
+.login-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Submit button */
+.login-form button {
+  padding: 10px;
+  background-color: #a3d9a5;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for button */
+.login-form button:hover {
+  background-color: #8ccf90;
+}
+
+/* Sign-up text */
+.login-form p {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Sign-up link */
+.login-form a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+
+/*InputTodo*/
+/* Full layout wrapper */
+.full-page-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 10vh;
+}
+
+/* Header bar */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Title/Logo */
+.logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* User profile block */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-text {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.user-text strong {
+  display: block;
+  font-weight: bold;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Section that holds the task form */
+.task-section {
+  flex-grow: 1;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Task form container */
+.task-container {
+  background-color: #e6f0e8;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  max-width: 1350px;
+  width: 100%;
+}
+
+/* Title for the task box */
+.task-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4a5d47;
+  margin-bottom: 1rem;
+}
+
+/* Form layout */
+.task-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+/* Input fields */
+.task-form input {
+  flex: 1 1 22%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  font-size: 0.95rem;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.task-form input::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Button styling */
+.task-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: #6c8569;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.task-form button:hover {
+  background-color: #5d7259;
+}
+
+/* Separator under form */
+.separator {
+  border: none;
+  border-top: 1px solid #4a5d47;
+  margin-top: 1.5rem;
+}
+
+/* ListTodos */
+/* List inside the green task container */
+.task-list {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* allows items to wrap to next line if needed */
+  gap: 2rem; /* spacing between todo items */
+  justify-content: center; /* center items horizontally */
+}
+
+.todo-item {
+  background-color: #f0f8f3;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  width: 250px; /* fixed width for better horizontal layout */
+  text-align: center;
+}
+
+.todo-item .button-group {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.status-btn,
+.Detail-btn,
+.delete-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.85rem;
+  width: 70px; /* or adjust as needed */
+  text-align: center;
+}
+
+.status-btn {
+  background-color: #9ecfa8;
+  color: #fff;
+}
+
+.Detail-btn {
+  background-color: #6c8fbe;
+  color: #fff;
+}
+
+.delete-btn {
+  background-color: #d66868;
+  color: white;
+}
+
+/*Detail*/
+.project-detail-container {
+  max-width: 1200px;
+  margin: 5rem auto 0 auto;
+  padding: 2rem;
+  background-color: #e6f0e8;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.project-detail-container h1,
+.project-detail-container h2 {
+  margin-bottom: 0.5rem;
+}
+
+.project-detail-container p {
+  margin: 1rem 0;
+}
+
+.Edit-form,
+.form-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  flex: 1;
+  min-width: 150px;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.Add-btn,
+.Add-sub,
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover,
+.Add-btn:hover,
+.Add-sub:hover {
+  background-color: #1565c0;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.todo-list li {
+  background-color: #f1f1f1;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.todo-list li p {
+  margin: 0.3rem 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.edit-subtask-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-edit-section {
+  margin-bottom: 2rem;
+}
+
+.subtask-add-section {
+  margin-bottom: 2rem;
+}
+
+.section-divider {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 2rem 0;
+}
+
+button {
+  padding: 8px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #007BFF;
+  color: white;
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #c82333;
+}
+
+button.complete {
+  background-color: #28a745;
+  color: white;
+}
+
+button.complete:hover {
+  background-color: #218838;
+}
+
+button.group {
+  background-color: #ffc107;
+  color: black;
+}
+
+button.group:hover {
+  background-color: #e0a800;
+}
+
+form input {
+  padding: 8px;
+  margin: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+form input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+form button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/*Log Out*/
+.logout-popup {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  background: #444;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  animation: fadeInOut 1.5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/*Team Members*/
